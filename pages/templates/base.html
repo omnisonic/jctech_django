@@ -1,7 +1,8 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{{title|title}}</title>
+  <title>{% block title %}{% endblock %}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -9,7 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <style>
   .fakeimg {
     height: 200px;
@@ -32,11 +33,11 @@
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
-    {% for page in pages %}
+    <!-- {% for page in pages %}
       <li class="nav-item">
         <a class="nav-link {{ 'active' }}"  href="{{ page.title }}"> { page.title|title }}</a>
       </li>
-    {% endfor %}
+    {% endfor %} -->
 
     </ul>
   </div>
@@ -49,7 +50,7 @@
    <div class="col-sm-4">
      <h2>About Me</h2>
      <h5>Photo of me:</h5>
-     <div><img class="fakeimg" src="./img/headshot.jpg" alt="Italian Trulli">
+     <div><img class="fakeimg" src="{% static 'img/headshot.jpg' %}" alt="photo">
 </div>
      <!-- <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
      <h3>Some Links</h3>
@@ -72,7 +73,8 @@
    </div>
 
     <div class="col">
-       <h2>{{ content|safe }}</h2>
+      {% block content %}
+      {% endblock content %}
     </div>
   </div>
 </div>

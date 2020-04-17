@@ -5,9 +5,33 @@ from django.shortcuts import render
 
 
 def homepage(request):
-    content_html = open('pages/content/index.html').read()
+    context = {}
+    return render(request, 'index.html', context)
+
+def bio(request):
+    content_html = open('pages/content/bio.html').read()
     context = {
         'content': content_html
     }
     return render(request, 'base.html', context)
 
+def blog(request):
+    content_html = open('pages/content/blog.html').read()
+    context = {
+        'content': content_html
+    }
+    return render(request, 'base.html', context)
+
+def contact(request):
+    content_html = open('pages/content/contact.html').read()
+    context = {
+        'content': content_html
+    }
+    return render(request, 'base.html', context)
+
+def projects(request):
+    content_html = open('pages/content/projects.html').read()
+    context = {
+        'content': content_html
+    }
+    return render(request, 'base.html', context)

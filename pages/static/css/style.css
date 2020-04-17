@@ -1,0 +1,98 @@
+body, html {
+  height: 100%;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.hd-text {
+
+    font-family: 'Merriweather', serif;
+    color: #cdae82;
+}
+.bg {
+  /* The image used */
+  background-image: url("../img/half-moon-1920.jpg");
+
+  /* Full height */
+  height: 20%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.colorful {
+}
+
+.jumbotron {
+  border-radius:0;
+}
+.white_txt {
+  color: #cdae82;
+}
+
+.sidebar-img {
+      height: 200px;
+      background: #aaa;
+     }
+
+.footer {
+  background-color: black;
+  color: #cdae82;
+}
+
+.custom2 {
+  line-height: 20px;
+}
+
+.custom3 {
+  border-color: #000;
+}
+
+.custom4 {
+  padding: 10em;
+}
+.custom5 {
+  text-decoration:blink
+}
+
+.gradient {
+background: rgb(0, 0, 0);
+background: -moz-linear-gradient(0deg, rgba(206, 206, 206, 0.902) 5%, rgba(205,174,130,0.9247899843531162) 50%);
+background: -webkit-linear-gradient(0deg, rgba(134, 131, 131, 0.902) 5%, rgba(205,174,130,0.9247899843531162) 50%);
+background: linear-gradient(0deg, rgba(95, 92, 92, 0.902) 5%, rgba(205,174,130,0.9247899843531162) 50%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#cdae82",GradientType=1); }
+
+.body-img {
+position: absolute;
+  clip: rect(0px,600px,200px,0px);
+}
+/* Contact from submit button*/
+.btn-info {
+	color: #fff;
+	/* background-color: #17a2b8; */
+	border-color: #fff;
+	background-color: black;
+}
+
+.btn-info:hover {
+	color: #000;
+	background-color: #fff;
+	border-color: #000;
+}
+
+img {
+	vertical-align: middle;
+	border-style: solid;
+}
+/* 
+.navbar-nav {
+  float:none;
+  margin:0 auto;
+  display: block;
+  text-align: center;
+}
+
+.navbar-nav > li {
+  display: inline-block;
+  float:none;
+} */
