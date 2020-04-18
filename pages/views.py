@@ -16,11 +16,6 @@ class BlogPageView(TemplateView):
 class ContactPageView(TemplateView):
     template_name = 'contact.html'
 
-# class ProjectsPageView(TemplateView):
-#     template_name = 'projects.html'
-#     # https://api.github.com/users/omnisonic/repos
-
-
 def projects(request):
     response = requests.get('https://api.github.com/users/omnisonic/repos')
     repos = response.json()
