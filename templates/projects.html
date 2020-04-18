@@ -1,11 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Projects{% endblock title %}
+{% block content %}
+
 <div>
-  <h2>Welcome!</h2>
-<h5>Title description, Dec 7, 2017</h5>
-  <p>Some text..</p>
-  <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  <h2>Projects on Github</h2>
+
+  {{ github_repos|linebreaks|urlizetrunc:100 }}
+<h5>My Github Repositories, Fri April 17th, 2020</h5>
+  <p>What I've Learned</p>
+  <p>I've learned that git and github are indespensible tools for web and software developers.  I am now confident with using git for version control as well as "pushing" my projects to github.com for sharing and collaboration.
+  </p>
   <br>
-  <h2>TITLE HEADING</h2>
-  <h5>Title description, Sep 2, 2017</h5>
-  <p>Some text..</p>
-  <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p
+ 
 </div>
+{% endblock content %}

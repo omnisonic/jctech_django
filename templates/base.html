@@ -33,11 +33,11 @@
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
-    <!-- {% for page in pages %}
+   
       <li class="nav-item">
-        <a class="nav-link {{ 'active' }}"  href="{{ page.title }}"> { page.title|title }}</a>
+        <a href="{%url 'home' %}">Home</a> | <a href="{% url 'about' %}">About</a> | <a href="{% url 'contact' %}">Contact</a>  | <a href="{% url 'projects' %}">Projects</a>
       </li>
-    {% endfor %} -->
+  
 
     </ul>
   </div>
@@ -48,8 +48,8 @@
 
 <div class="row">
    <div class="col-sm-4">
-     <h2>About Me</h2>
-     <h5>Photo of me:</h5>
+     <h2>{{ pages.title }}</h2>
+     <h5>Hello Friends.</h5>
      <div><img class="fakeimg" src="{% static 'img/headshot.jpg' %}" alt="photo">
 </div>
      <!-- <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
